@@ -11,6 +11,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&auto=format&fit=crop&q=60",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
     color: "from-neon-cyan to-neon-blue",
+    liveUrl: "#",
+    sourceUrl: "#",
   },
   {
     id: 2,
@@ -20,6 +22,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&auto=format&fit=crop&q=60",
     tags: ["Premiere Pro", "After Effects", "Cinema 4D"],
     color: "from-neon-magenta to-neon-purple",
+    liveUrl: "https://drive.google.com/drive/folders/1miCf-wiKLRkXbJ1E3XAm-ybSHeo7PkVO?usp=sharing",
+    sourceUrl: null,
   },
   {
     id: 3,
@@ -29,6 +33,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
     tags: ["Figma", "React", "D3.js", "TypeScript"],
     color: "from-neon-purple to-neon-cyan",
+    liveUrl: "#",
+    sourceUrl: "#",
   },
   {
     id: 4,
@@ -38,6 +44,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&auto=format&fit=crop&q=60",
     tags: ["DaVinci Resolve", "After Effects", "Color Grading"],
     color: "from-neon-blue to-neon-magenta",
+    liveUrl: "https://drive.google.com/drive/folders/1miCf-wiKLRkXbJ1E3XAm-ybSHeo7PkVO?usp=sharing",
+    sourceUrl: null,
   },
   {
     id: 5,
@@ -47,6 +55,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=800&auto=format&fit=crop&q=60",
     tags: ["Three.js", "GSAP", "React", "WebGL"],
     color: "from-neon-cyan to-neon-magenta",
+    liveUrl: "#",
+    sourceUrl: "#",
   },
   {
     id: 6,
@@ -56,6 +66,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop&q=60",
     tags: ["Figma", "Prototyping", "User Research"],
     color: "from-neon-purple to-neon-blue",
+    liveUrl: "#",
+    sourceUrl: "#",
   },
 ];
 
@@ -262,22 +274,32 @@ const PortfolioSection = () => {
                 </div>
 
                 <div className="flex gap-4 mt-8">
-                  <motion.button
-                    className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-wider rounded-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <ExternalLink size={16} />
-                    View Live
-                  </motion.button>
-                  <motion.button
-                    className="flex items-center gap-2 px-6 py-3 border border-primary/50 text-primary font-heading text-sm uppercase tracking-wider rounded-lg hover:bg-primary/10"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github size={16} />
-                    Source
-                  </motion.button>
+                  {selectedProject.liveUrl && (
+                    <motion.a
+                      href={selectedProject.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-wider rounded-lg"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <ExternalLink size={16} />
+                      {selectedProject.category === "Video Editing" ? "View Portfolio" : "View Live"}
+                    </motion.a>
+                  )}
+                  {selectedProject.sourceUrl && (
+                    <motion.a
+                      href={selectedProject.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 border border-primary/50 text-primary font-heading text-sm uppercase tracking-wider rounded-lg hover:bg-primary/10"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github size={16} />
+                      Source
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>

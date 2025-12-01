@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import prafullPhoto from "@/assets/prafull-photo.jpg";
 
 const skills = [
   { name: "React / Next.js", level: 92, color: "from-neon-cyan to-neon-blue" },
@@ -40,6 +41,76 @@ const AboutSection = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mt-4">
             The <span className="text-gradient">Story</span> Behind The Code
           </h2>
+        </motion.div>
+
+        {/* Photo Section */}
+        <motion.div
+          className="flex justify-center mb-16"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="relative group">
+            {/* Outer Glow Ring */}
+            <motion.div
+              className="absolute -inset-4 rounded-full bg-gradient-to-r from-neon-cyan via-neon-magenta to-neon-purple opacity-60 blur-xl"
+              animate={{
+                rotate: 360,
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+              }}
+            />
+            
+            {/* Neon Border */}
+            <motion.div
+              className="absolute -inset-1 rounded-full bg-gradient-to-r from-neon-cyan via-neon-magenta to-neon-purple"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            />
+            
+            {/* Photo Container */}
+            <motion.div
+              className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-background"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <img
+                src={prafullPhoto}
+                alt="Prafull - Web Developer & Video Editor"
+                className="w-full h-full object-cover object-top"
+              />
+              
+              {/* Hover Overlay */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </motion.div>
+            
+            {/* Floating Particles */}
+            {[...Array(6)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 rounded-full bg-primary/60"
+                style={{
+                  top: `${20 + Math.random() * 60}%`,
+                  left: `${10 + Math.random() * 80}%`,
+                }}
+                animate={{
+                  y: [0, -20, 0],
+                  opacity: [0.3, 1, 0.3],
+                }}
+                transition={{
+                  duration: 2 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: i * 0.3,
+                }}
+              />
+            ))}
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">

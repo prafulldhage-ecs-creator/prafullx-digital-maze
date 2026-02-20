@@ -3,6 +3,7 @@ import { useRef } from "react";
 import prafullPhoto from "@/assets/prafull-photo.jpg";
 
 const skills = [
+  { name: "Python (Learning)", level: 30, color: "from-neon-purple to-neon-blue" },
   { name: "HTML", level: 100, color: "from-neon-cyan to-neon-blue" },
   { name: "CSS", level: 88, color: "from-neon-blue to-neon-purple" },
   { name: "JavaScript", level: 60, color: "from-neon-purple to-neon-magenta" },

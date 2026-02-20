@@ -120,14 +120,14 @@ const AboutSection = () => {
           >
             <div className="glass rounded-2xl p-6 md:p-8 mb-8">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm a passionate <span className="text-primary">Web Developer</span> and{" "}
-                <span className="text-secondary">Video Editor</span> with a keen eye for detail and 
-                a love for creating digital experiences that stand out.
+                I'm a second-year student at <span className="text-primary">Atharva University, Mumbai</span>, and a{" "}
+                <span className="text-secondary">Frontend Web Developer</span> with experience in building 
+                responsive and user-friendly web interfaces. I enjoy creating clean designs and bringing ideas to life through code.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My approach combines technical expertise with creative vision, treating each project 
-                as a unique puzzle to solve. From crafting responsive web applications to producing 
-                captivating video content, I bring ideas to life with precision and style.
+                Currently, I'm learning <span className="text-primary">Python</span> and developing a strong interest 
+                in <span className="text-secondary">AI & Machine Learning</span> to expand my technical skills. I believe 
+                in continuous learning and aim to combine frontend development with future-focused technologies.
               </p>
             </div>
 

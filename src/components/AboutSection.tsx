@@ -3,20 +3,18 @@ import { useRef } from "react";
 import prafullPhoto from "@/assets/prafull-photo.jpg";
 
 const skills = [
-  { name: "React / Next.js", level: 92, color: "from-neon-cyan to-neon-blue" },
-  { name: "TypeScript", level: 88, color: "from-neon-blue to-neon-purple" },
-  { name: "Node.js / Express", level: 85, color: "from-neon-purple to-neon-magenta" },
-  { name: "Video Editing", level: 95, color: "from-neon-magenta to-neon-cyan" },
+  { name: "HTML", level: 100, color: "from-neon-cyan to-neon-blue" },
+  { name: "CSS", level: 88, color: "from-neon-blue to-neon-purple" },
+  { name: "JavaScript", level: 60, color: "from-neon-purple to-neon-magenta" },
+  { name: "Video Editing", level: 80, color: "from-neon-magenta to-neon-cyan" },
   { name: "UI/UX Design", level: 80, color: "from-neon-cyan to-neon-purple" },
-  { name: "Motion Graphics", level: 82, color: "from-neon-purple to-neon-cyan" },
 ];
 
 const timeline = [
-  { year: "2019", title: "Started Learning Web Development", description: "Began my journey with HTML, CSS, and JavaScript" },
-  { year: "2020", title: "First Freelance Projects", description: "Completed my first paid web development projects" },
-  { year: "2021", title: "Video Editing Mastery", description: "Expanded into video editing and motion graphics" },
-  { year: "2022", title: "PrafullX WebStudio", description: "Launched my own creative studio brand" },
-  { year: "2023+", title: "Full-Stack & Beyond", description: "Specializing in modern full-stack solutions" },
+  { year: "2022", title: "Started Learning Video Editing", description: "Began exploring video editing tools and techniques" },
+  { year: "2024", title: "Started Web Development", description: "Began my journey with HTML, CSS, and JavaScript" },
+  { year: "2024", title: "PrafullX WebStudio", description: "Launched my own creative studio brand" },
+  { year: "2025+", title: "Growing & Learning", description: "Expanding skills in web development and creative content" },
 ];
 
 const AboutSection = () => {
@@ -193,9 +191,9 @@ const AboutSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-12">
               {[
-                { value: "50+", label: "Projects" },
-                { value: "30+", label: "Clients" },
-                { value: "4+", label: "Years" },
+                { value: "10+", label: "Projects" },
+                { value: "5+", label: "Clients" },
+                { value: "1+", label: "Years" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

@@ -3,8 +3,8 @@ import { ChevronDown } from "lucide-react";
 import FloatingElement from "./FloatingElement";
 
 const HeroSection = () => {
-  const skills = ["React", "TypeScript", "Node.js", "Premiere Pro", "After Effects", "Figma"];
-  const funFacts = ["☕ Coffee Addict", "🎮 Gamer", "🌙 Night Owl", "🚀 Always Learning"];
+  const skills = ["HTML", "CSS", "JavaScript", "Python", "Figma", "Video Editing"];
+  const funFacts = ["🎓 Atharva University", "🤖 AI Enthusiast", "🌙 Night Owl", "🚀 Always Learning"];
 
   return (
     <section
@@ -73,11 +73,11 @@ const HeroSection = () => {
             transition={{ delay: 0.6 }}
           >
             <span className="font-heading text-lg md:text-2xl text-muted-foreground">
-              Web Developer
+              Frontend Developer
             </span>
             <span className="text-neon-magenta text-2xl animate-pulse">×</span>
             <span className="font-heading text-lg md:text-2xl text-muted-foreground">
-              Video Editor
+              AI Enthusiast
             </span>
           </motion.div>
 
@@ -87,8 +87,8 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            Crafting stunning digital experiences that blend creativity with technology.
-            Welcome to my digital puzzle – explore, interact, and discover.
+            Second-year student at Atharva University, Mumbai. I build responsive, 
+            user-friendly web interfaces and explore AI & Machine Learning to create meaningful digital solutions.
           </motion.p>
 
           <motion.div
